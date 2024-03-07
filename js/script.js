@@ -24,6 +24,7 @@ function onYouTubeIframeAPIReady() {
 
 function onPlayerReady() {
     player.loadVideoById("Z1sSqyeEg5o", 0, "large")
+    player.pauseVideo();
 
 }
 
@@ -45,7 +46,6 @@ function init() {
 
     $e.knot.addEventListener('mouseleave', function () {
         player.stopVideo();
-        player.loadVideoById("Z1sSqyeEg5o", 0, "large")
     })
 }
 
