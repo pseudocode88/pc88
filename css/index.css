@@ -146,6 +146,37 @@ p {
     padding-top: 184px;
 }
 
-.section_last img {
+#knot {
     width: 184px;
+}
+
+#knot:hover {
+    animation: pulse-animation 40s infinite;
+}
+
+@keyframes pulse-animation {
+    0% {
+        transform: scale(1, 1);
+        /* box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
+
+        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2)); */
+    }
+
+    50% {
+        fill: white;
+        transform: scale(1.1, 1.1);
+        /* box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); */
+        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0));
+        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0)); */
+    }
+
+    100% {
+        fill: black;
+        transform: scale(1, 1);
+        /* box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
+
+        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2));
+        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2)); */
+    }
 }
