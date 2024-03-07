@@ -1,0 +1,151 @@
+:root {
+    --canvas: #FEA86F;
+
+    --border-primary: #000000;
+
+    --content-primary: #000000;
+
+    --typo-heading: "Inter", sans-serif;
+    --typo-body: "IBM Plex Mono", monospace;
+}
+
+
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--canvas);
+    padding: 120px 0;
+}
+
+main {
+    width: 1406px;
+    margin: auto;
+}
+
+section {
+    padding: 64px;
+    border: 6px solid var(--border-primary);
+}
+
+h1 {
+    font-family: var(--typo-heading);
+    font-size: 138px;
+    line-height: 1.04;
+    letter-spacing: -2.76px;
+    color: var(--content-primary);
+    grid-area: header;
+}
+
+h2 {
+    font-family: var(--typo-heading);
+    color: var(--content-primary);
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 67.2px;
+    letter-spacing: -0.6px;
+}
+
+p {
+    color: var(--content-primary);
+    font-family: var(--typo-body);
+    font-size: 21px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 27.4px;
+    letter-spacing: -0.21px;
+}
+
+.section_home {
+    display: grid;
+    grid-template-columns: 48% auto;
+    grid-column-gap: 64px;
+    grid-row-gap: 128px;
+    grid-template-areas:
+        "header header"
+        "gfx para";
+    align-items: end;
+}
+
+.section_home_para {
+    grid-area: para;
+}
+
+.section_course {
+    border-top: 0;
+    border-bottom: 0;
+    /* border-top: 6px solid var(--border-primary); */
+
+    display: grid;
+    grid-template-columns: 48% auto;
+    column-gap: 64px;
+    row-gap: 128px;
+    grid-template-areas:
+        "header header"
+        "course-a course-b";
+}
+
+.section_course_item {
+    display: flex;
+    gap: 32px;
+    flex-direction: column;
+}
+
+.section_course_item_a {
+    grid-area: course-a;
+}
+
+.section_course_item_b {
+    grid-area: course-b;
+}
+
+.section_mondrian {
+    padding: 0 !important;
+    /* border-bottom: 120px solid var(--border-primary); */
+    border: 0;
+    /* border-top: 0px solid var(--border-primary); */
+}
+
+#mondrian {
+    width: 100%;
+    height: 300px;
+    position: relative;
+    border: 3px solid var(--border-primary);
+    box-sizing: border-box;
+    grid-area: gfx;
+}
+
+.block {
+    position: absolute;
+}
+
+.block:hover {
+    background-color: var(--content-primary);
+}
+
+.red {
+    /* background-color: blue; */
+    /* border-color: red; */
+    /* border: 3px solid var(--border-primary); */
+    /* box-sizing: border-box; */
+}
+
+/* .red {
+    background-color: red;
+} */
+
+.section_last {
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+    padding-top: 184px;
+}
+
+.section_last img {
+    width: 184px;
+}
