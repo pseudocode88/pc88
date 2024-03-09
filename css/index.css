@@ -36,7 +36,7 @@ h1 {
     font-family: var(--typo-heading);
     font-size: 138px;
     line-height: 1.04;
-    letter-spacing: -2.76px;
+    letter-spacing: -6px;
     color: var(--content-primary);
     grid-area: header;
 }
@@ -48,7 +48,7 @@ h2 {
     font-style: normal;
     font-weight: 700;
     line-height: 67.2px;
-    letter-spacing: -0.6px;
+    letter-spacing: -0.8px;
 }
 
 p {
@@ -148,35 +148,11 @@ p {
 
 #knot {
     width: 184px;
+    transition: transform ease-in 54s;
+    cursor: pointer;
 }
 
-#knot:hover {
-    animation: pulse-animation 40s infinite;
-}
 
-@keyframes pulse-animation {
-    0% {
-        transform: scale(1, 1);
-        /* box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
-
-        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2));
-        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2)); */
-    }
-
-    50% {
-        fill: white;
-        transform: scale(1.1, 1.1);
-        /* box-shadow: 0 0 0 20px rgba(0, 0, 0, 0); */
-        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0));
-        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0)); */
-    }
-
-    100% {
-        fill: black;
-        transform: scale(1, 1);
-        /* box-shadow: 0 0 0 0px rgba(0, 0, 0, 0.2); */
-
-        /* -webkit-filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2));
-        filter: drop-shadow(0 0 0 20px rgba(0, 0, 0, 0.2)); */
-    }
+.knot-rotate {
+    transform: rotate(360deg);
 }
