@@ -6,17 +6,14 @@ function init() {
 
     $e.knot.addEventListener('click', function () {
         $e.player.play();
-        // $e.knot.className = 'knot-rotate';
-
         $e.knot.setAttribute('class', "knot-rotate")
-
-        console.log(this, $e.knot.className)
+        document.body.className = 'turn-body';
     })
 
-    // $e.knot.addEventListener('mouseleave', function () {
-    //     $e.player.pause();
-    //     $e.player.currentTime = 0;
-    // })
+    $e.player.addEventListener('ended', function () {
+        $e.knot.setAttribute('class', "knot-rotate-back")
+        document.body.className = '';
+    })
 }
 
 window.onload = init;

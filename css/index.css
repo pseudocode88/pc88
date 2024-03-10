@@ -20,6 +20,7 @@ body {
 body {
     background-color: var(--canvas);
     padding: 120px 0;
+    transition: background-color ease-in 54s;
 }
 
 main {
@@ -149,10 +150,18 @@ p {
 #knot {
     width: 184px;
     transition: transform ease-in 54s;
-    cursor: pointer;
+    /* cursor: pointer; */
 }
 
 
 .knot-rotate {
     transform: rotate(360deg);
+}
+
+.knot-rotate-back {
+    transition: transform ease-in 1ms !important;
+}
+
+.turn-body {
+    background-color: white !important;
 }
