@@ -240,7 +240,7 @@ p {
     height: calc(100vh/2);
     background: linear-gradient(180deg, #FAF4E6 0%, #c1e5ff 100%);
     position: fixed;
-    bottom: -400px;
+    bottom: calc(100vh/-2);
     z-index: -1;
 }
 
