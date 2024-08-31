@@ -5,7 +5,7 @@
 
     --content-primary: #333333;
 
-    --typo-heading: "Prata", "EB Garamond", sans-serif;
+    --typo-heading: "Prata", sans-serif;
     --typo-body: "DM Sans";
 }
 
@@ -108,7 +108,7 @@ p {
 
 .section_home_para {
     padding: 0 40px 0 120px;
-    border-left: 1px solid var(--border-primary);
+    /* border-left: 1px solid var(--border-primary); */
     grid-area: para;
 }
 
@@ -223,6 +223,7 @@ p {
     position: fixed;
     bottom: -347px;
     right: -170px;
+    z-index: 1;
 }
 
 .cloud-right-up {
@@ -235,12 +236,33 @@ p {
     bottom: -347px !important;
 }
 
+#cloud-small {
+    width: 800px;
+    position: fixed;
+    bottom: -304px;
+    transform: translate(-50%, 0);
+    left: 60%;
+    z-index: 0;
+}
+
+.cloud-small-up {
+    transition: bottom ease-in 54s;
+    bottom: 204px !important;
+}
+
+.cloud-small-down {
+    transition: bottom ease-out 5s !important;
+    bottom: -304px !important;
+}
+
 #dark-sky {
     width: 100%;
-    height: calc(100vh/2);
+    height: calc(100vh/1);
+    /* background: linear-gradient(180deg, #FAF4E6 0%, #faf4e6d6 100%), url(/assets/pattern.png); */
     background: linear-gradient(180deg, #FAF4E6 0%, #c1e5ff 100%);
     position: fixed;
-    bottom: calc(100vh/-2);
+    bottom: calc(100vh/-1);
+    /* bottom: 0; */
     z-index: -1;
 }
 
@@ -251,5 +273,5 @@ p {
 
 .dark-sky-down {
     transition: bottom ease-out 8s !important;
-    bottom: calc(100vh/-2) !important;
+    bottom: calc(100vh/-1) !important;
 }
