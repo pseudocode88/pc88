@@ -1,0 +1,17 @@
+mixin css_links(...files)
+    each file in files
+        link(rel="stylesheet" type="text/css" href = file + ".css")
+
+title #{pageTitle}
++css_links(
+    "/variables",
+    "/typography",
+    "/shared/main_layout",
+    "/shared/navigation",
+    "/shared/header",
+    "/shared/footer",
+    "/page/home",
+    "/page/blog",
+    "/page/blog_post",
+    "/page/about"
+)

@@ -1,0 +1,28 @@
+doctype html
+head
+    include ../shared/page_head
+body
+    main
+        include ../shared/navigation
+
+        include ../shared/header
+
+        div.Blog
+            div.Blog-Page
+                h2.quote.quote-m Page 1
+            div.Blog-Image-Fill
+            div.Blog-Image
+            div.Post-Wrapper
+                each post in posts
+                    a.Post(href="/blog/" + post.slug)
+                        div.Post__Title-Wrapper
+                            p.Post__Date= post.formattedDate + ' • ' + post.category
+                            h3.heading-s.Post__Title= post.title
+                        p.body-m.Post__Description= post.description + '...'
+                        p.Post__More(href="/blog/" + post.slug) Read more
+
+        include ../shared/footer
+
+    div#dark-sky
+
+    script(src="script.js", type="text/javascript")

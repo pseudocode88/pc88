@@ -1,0 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=EB+Garamond:ital@0;1&display=swap');
+
+:root {
+    --canvas: #F8F0DE;
+
+    --surface-static-primary: #FAF4E6;
+    --surface-static-secondary: #F8F0DE;
+
+    --border-primary: #766F60;
+    --border-secondary: #ded2b7;
+
+    --content-primary: #433B29;
+    --content-secondary: #433b2999;
+}
+
+:root {
+    --type-sans: -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Segoe UI", Helvetica, Arial, Roboto, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+    --type-serif: "EB Garamond", serif;
+
+    --type-weight-normal: 400;
+    --type-weight-medium: 500;
+    --type-weight-semibold: 600;
+    --type-weight-bold: 700;
+    --type-weight-black: 800;
+}
+
+/* 11, 12, 14, 16, 18, 24, 32, 60, 71 */

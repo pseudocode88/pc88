@@ -1,0 +1,25 @@
+.Home__About_Wrapper {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 44% 56%;
+    grid-template-areas: "image message";
+    border: 1px solid var(--border-primary);
+    border-top: 0;
+}
+
+.Home__About_Image {
+    width: 100%;
+    grid-area: image;
+    background-image: url(/home_about.png);
+    background-size: contain;
+}
+
+.Home__About_Message {
+    display: flex;
+    flex-direction: column;
+    gap: 26px;
+    padding: 64px;
+    grid-area: message;
+    background-color: var(--surface-static-primary);
+    border-left: 1px solid var(--border-primary);
+}

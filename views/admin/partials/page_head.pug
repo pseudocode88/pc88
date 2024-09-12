@@ -1,0 +1,11 @@
+mixin css_links(...files)
+    each file in files
+        link(rel="stylesheet" type="text/css" href = file + ".css")
+
+title Admin
++css_links(
+    "/variables",
+    "/typography",
+    "/admin/layout",
+    "/admin/form"
+)

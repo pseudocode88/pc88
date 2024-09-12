@@ -1,0 +1,81 @@
+p,
+h1, h2, h3,
+a,
+label {
+    margin: 0;
+    padding: 0;
+    font-family: var(--type-sans);
+    color: var(--content-primary);
+}
+
+.heading-s {
+    font-size: 24px;
+    line-height: 31.2px;
+    letter-spacing: -0.1px;
+}
+
+.heading-m {
+    font-size: 32px;
+}
+
+.heading-l {
+    font-size: 60px;
+    letter-spacing: -1.8px;
+    line-height: 1.1667;
+}
+
+.heading-xl {
+    font-size: 71px;
+}
+
+.quote {
+    font-family: var(--type-serif);
+    color: var(--content-primary);
+    font-weight: 400;
+}
+
+.quote-m {
+    font-size: 32px;
+    line-height: normal;
+    font-style: italic;
+}
+
+.quote-ml {
+    font-size: 40px;
+    line-height: normal;
+    font-style: italic;
+}
+
+.quote-l {
+    font-size: 64px;
+    line-height: 1.07;
+    font-style: italic;
+}
+
+.strong {
+    font-weight: 700;
+}
+
+.label {
+    font-weight: 600;
+}
+
+.body-xs {
+    font-size: 12px;
+    line-height: 1.46;
+}
+
+.body-s {
+    font-size: 14px;
+    line-height: 1.46;
+}
+
+.body-m {
+    font-size: 16px;
+    line-height: 23.6px;
+}
+
+.body-l {
+    font-size: 18px;
+    line-height: 1.5;
+}

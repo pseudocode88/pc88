@@ -1,0 +1,19 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background-color: var(--canvas);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+}
+
+main {
+    width: 1050px;
+    height: auto;
+    margin: auto;
+}

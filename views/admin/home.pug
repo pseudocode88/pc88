@@ -1,0 +1,25 @@
+doctype html
+head
+    include ./partials/page_head
+body
+    main
+        header
+            h1.heading-m Blog Posts
+            p.body-l Manage all the published blog posts
+        div.Controls-Wrapper
+            form(action="/admin/blog/new-post")
+                button New post
+        div.Blogs__List
+            each article in articles
+                div.Blogs__List-Item
+                    div.List-Item__Date
+                        p.body-m #{article.formattedDate}
+                    div.List-Item__Title
+                        a.body-m(href="/blog/" + article.slug target="_blank") #{article.title}
+                    div.List-Item__Category
+                        p.body-m #{article.category}
+                    div.List-Item__Action
+                        - var editURL = "/admin/blog/new-post?edit=true&id=" + article._id
+                        - var deleteURL = "/admin/blog/delete/" + article._id + "/" + article.filename
+                        a.body-m(href=editURL) Edit
+                        a.body-m(href=deleteURL, onclick="return confirm('Are you sure?')") Delete

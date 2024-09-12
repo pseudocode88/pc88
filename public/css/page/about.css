@@ -1,0 +1,85 @@
+.About__Wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	grid-template-areas: "image message";
+	border: 1px solid var(--border-primary);
+	border-top: 0;
+}
+
+.About__Image {
+	width: 100%;
+	grid-area: image;
+	background-image: url(/about-engraving-top.png);
+	background-size: cover;
+}
+
+.About__Message {
+	display: flex;
+	flex-direction: column;
+	gap: 26px;
+	padding: 64px;
+	grid-area: message;
+	background-color: var(--surface-static-primary);
+	border-left: 1px solid var(--border-primary);
+}
+
+.Quote__Wrapper {
+	width: 100%;
+	border: 1px solid var(--border-primary);
+	border-top: 0;
+	padding: 64px;
+	box-sizing: border-box;
+	background-color: var(--surface-static-primary);
+
+	p {
+		max-width: 576px;
+		text-align: center;
+		margin: auto;
+	}
+}
+
+.Journey__Wrapper {
+	width: 100%;
+	display: grid;
+	grid-template-columns: 50px auto 33%;
+	grid-template-areas: "empty list aside";
+	border: 1px solid var(--border-primary);
+	border-top: 0;
+}
+
+.Journey__List {
+	background-color: var(--surface-static-primary);
+	grid-area: list;
+	border: 1px solid var(--border-primary);
+	border-top: 0;
+	border-bottom: 0;
+	padding: 64px;
+	display: flex;
+	flex-direction: column;
+	gap: 64px;
+}
+
+.Journey__Item {
+	h3 {
+		margin-bottom: 8px;
+	}
+
+	.Jounrney__Team {
+		margin-bottom: 8px;
+	}
+
+	.Journey__Date {
+		text-transform: uppercase;
+		color: var(--content-secondary);
+		margin-bottom: 16px;
+	}
+
+	.Journey__Note {
+		margin-bottom: 16px;
+
+		.Journey__Note:last-child {
+			margin-bottom: 0;
+		}
+	}
+}

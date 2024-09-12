@@ -1,0 +1,49 @@
+doctype html
+head
+    include ./partials/page_head
+body
+    main.main-s
+        header
+            h1.heading-m= (edit ? "Edit Post" : "New Post")
+            p.body-l= (edit ? "Modify and re-publish the post" : "Write a beautiful post for your blog")
+        div.Controls-Wrapper
+            form.Form(action=(edit ? "/admin/blog/edit" : "/admin/blog/create"), method="post")
+                if edit
+                    input#id(type="hidden", name="_id", value=doc._id)
+                    input#filename(type="hidden", name="filename", value=doc.filename)
+                div.Form-Item
+                    label.body-m.strong Title
+                    input#title(type="text", name="title", value=doc.title)
+                div.Form-Item
+                    label.body-m.strong Content
+                    textarea#content.textarea-l(name="content")= doc.content
+                div.Form-Item
+                    label.body-m.strong Date
+                    input#date(type="date", name="date", value=doc.dateObj)
+                div.Form-Item
+                    label.body-m.strong Category
+                    label
+                        input(type="radio" name="category" value="Design" checked=(doc.category == 'Design' ? true : false))
+                        |  Design
+                    label
+                        input(type="radio" name="category" value="Professional Growth" checked=(doc.category == 'Professional Growth' ? true : false))
+                        |  Professional Growth
+                    label
+                        input(type="radio" name="category" value="Design System" checked=(doc.category == 'Design System' ? true : false))
+                        |  Design System
+                    label
+                        input(type="radio" name="category" value="Leadership" checked=(doc.category == 'Leadership' ? true : false))
+                        |  Leadership
+                    label
+                        input(type="radio" name="category" value="General" checked=(doc.category == 'General' ? true : false))
+                        |  General
+                div.Form-Item
+                    label.body-m.strong Description
+                    textarea#description.textarea-m(name="description", maxlength="300")=  doc.description
+                div.Form-Item
+                    label.body-m.strong Slug
+                    input#slug(type="text", name="slug", value=doc.slug)
+
+                input.button(type="submit", value=(edit ? "Edit post" : "Create post"))
+
+    script(src="/admin/new_post.js", type="text/javascript")

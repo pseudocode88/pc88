@@ -1,0 +1,37 @@
+doctype html
+head
+    include ../shared/page_head
+body
+    main
+        include ../shared/navigation
+
+        include ../shared/header
+
+        div.Content-Wrapper
+            div.Post-Content
+                p.Post-ContentDate
+                    a(href="/blog") ← back
+                    span= "/"
+                    span.body-s.strong= formattedDate
+
+                != htmlContent
+                img.Signature(src="/signature.png")
+                a.Back_Button(href="javascript:void(0)" onclick="goBack()") Back to list
+            div.Post-Aside
+
+
+
+        include ../shared/footer
+
+    div#dark-sky
+
+    script(src="/script.js", type="text/javascript")
+
+    script.
+      function goBack() {
+          if (window.history.length > 1) {
+              history.back();
+          } else {
+              window.location.href = '/blog';
+          }
+      }

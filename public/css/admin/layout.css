@@ -1,0 +1,102 @@
+*,
+html,
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+body {
+    background-color: var(--canvas);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    padding: 120px 0;
+}
+
+main {
+    width: 1200px;
+    height: auto;
+    margin: auto;
+    border: 1px solid var(--border-primary);
+    background-color: var(--surface-static-primary);
+}
+
+.main-s {
+    width: 720px;
+}
+
+header {
+    padding: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+button,
+.button {
+    font-size: 16px;
+    font-weight: 700;
+    background-color: #27ae60;
+    color: white;
+    border: 0;
+    padding: 12px 32px;
+}
+
+button:hover,
+.button:hover {
+    background-color: #2cc06a;
+}
+
+button:active,
+.button:active {
+    background-color: #1f9751;
+}
+
+.Controls-Wrapper {
+    width: 100%;
+    display: flex;
+    padding: 32px;
+    box-sizing: border-box;
+}
+
+.Blogs__List-Item {
+    display: flex;
+    width: 100%;
+    border: 1px solid var(--border-primary);
+    border-left: 0;
+    border-right: 0;
+    border-bottom: 0;
+}
+
+.Blogs__List-Item div {
+    padding: 12px;
+    box-sizing: border-box;
+    border-right: 1px solid var(--border-secondary);
+}
+
+.Blogs__List-Item div:last-child {
+    border-right: 0;
+}
+
+.List-Item__Date {
+    width: 30%;
+}
+
+.List-Item__Title {
+    width: 100%;
+}
+
+.List-Item__Category {
+    width: 30%;
+}
+
+.List-Item__Action {
+    display: flex;
+    gap: 16px;
+    width: 15%;
+    justify-content: center;
+}
+
+.List-Item__Action * {
+    cursor: pointer;
+}
